@@ -84,3 +84,28 @@ Motion_Capture_Camera_ART_Recorder/
   git submodule update --remote DTrackSDK
   ```
 
+## Dépannage
+
+### `ninja` ou `g++` introuvable après installation
+
+Après un `winget install`, le `PATH` n'est pas mis à jour dans les terminaux déjà ouverts.
+Fermer puis rouvrir le terminal (ou redémarrer VS Code complètement) suffit en général.
+Pour recharger le `PATH` sans fermer la session :
+
+```powershell
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+ninja --version
+g++ --version
+```
+
+> `g++` installé via MSYS2 se trouve dans `C:\msys64\ucrt64\bin` : ce dossier doit être dans le `PATH`.
+
+### `Does not match the generator used previously`
+
+Le dossier `build/` a été généré avec un autre générateur (Visual Studio, par exemple).
+Le supprimer puis relancer la configuration :
+
+```powershell
+Remove-Item -Recurse -Force build
+cmake --preset ninja-release
+```
