@@ -2,9 +2,9 @@
 
 Enregistreur C++ de flux DTrack (ART) avec visualisation optionnelle (Python).
 <p align="center">
-  <img src="assets/3D_trajectoire.png" width="32%">
-  <img src="assets/XYZRxRyRz_visualized.png" width="32%">
-  <img src="assets/3D_trajectoire.png" width="32%">
+  <img src="assets/3D_trajectoire.png" width="40%">
+  <img src="assets/XYZRxRyRz_visualized.png" width="55%">
+
 </p>
 ## Prérequis
 
