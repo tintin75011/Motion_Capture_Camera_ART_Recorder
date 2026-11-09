@@ -6,6 +6,7 @@ Enregistreur C++ de flux DTrack (ART) avec visualisation optionnelle (Python).
   <img src="assets/XYZRxRyRz_visualized.png" width="55%">
 
 </p>
+
 ## Prérequis
 
 ### C++ (build de `record.exe`)
